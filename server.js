@@ -1,7 +1,9 @@
 const express = require('express')
 const app = express()
+const PORT = 8080
 
-
-app.get('/start', (req, res)=>{
+app.get('/', (req, res)=>{
     res.send('hello world')
 })
+
+app.listen(PORT, ()=>{console.log(`App listen on port ${PORT}`)})
